@@ -3,10 +3,10 @@ import React from 'react'
 const Links = () => {
     return (
         <div>
-            <ul className="links-container">
+            <ul classname="link-list">
+                <li className="links" id="contact"><a href="#">Contact</a></li>
+                <li className="links"><a href="https://github.com/Warder3?tab=repositories" target="_blank">Github</a></li>
                 <li className="links"><a href="#">About</a></li>
-                <li className="links"><a href="#">Github</a></li>
-                <li className="links"><a href="#">Contact</a></li>
             </ul>
         </div>
     )

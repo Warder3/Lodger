@@ -5,17 +5,47 @@ body {
   background-image: linear-gradient(#d7e1ec, #ffffff);
 }
 
-.navbar-container {
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
   width: 100;
   height: 100;
   background-color: #28282B;
 }
 
-#brandname {
-  padding: 15px 20px;
+#brandname a {
+  text-decoration: none;
+  padding: 15px 30px;
   margin: 0;
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
-  color: white;
+  color: #faebd7;
+}
+
+#brandname a:hover {
+  color: #CBC3E3;
+}
+
+.links {
+  list-style-type: none;
+  float: right;
+  padding: 0px 10px;
+  margin: 0px 25px;
+  font-size: 25px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #CBC3E3;
+}
+
+.links a:hover {
+  color:#faebd7;
+}
+
+#contact {
+  background-color: #097969;
+  padding: 2px 15px;
+  border-radius: 10px;
 }

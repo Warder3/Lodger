@@ -4,8 +4,8 @@ import Links from './links'
 const Navbar = () => {
     return (
         <div className="nav_bar">
-            <p id="brandname">Lodger</p>
-            <div className="links">
+            <p id="brandname"><a href="#">Lodger</a></p>
+            <div className="links-container">
                 <Links />
             </div>
         </div>
