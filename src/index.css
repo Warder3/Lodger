@@ -5,7 +5,7 @@ body {
   background-image: linear-gradient(#d7e1ec, #ffffff);
 }
 
-.nav_bar {
+.navbar-container {
   display: flex;
   justify-content: space-between;
   width: 100;
@@ -20,11 +20,11 @@ body {
   font-size: 30px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
-  color: #faebd7;
+  color: #CBC3E3;
 }
 
 #brandname a:hover {
-  color: #CBC3E3;
+  color: #faebd7;
 }
 
 .links {
@@ -45,7 +45,66 @@ body {
 }
 
 #contact {
-  background-color: #097969;
+  background-color: #228B22;
   padding: 2px 15px;
   border-radius: 10px;
+}
+
+.hero-container {
+  width: 25%;
+  height: 300px;
+  margin: 40px 30px 0;
+  border-radius: 10px;
+  background-color: #E85A4F;
+  position: absolute;
+}
+
+#roommate {
+  margin: 0;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.names {
+  width: 100%;
+  height: 260px;
+  background-color: #ffb6c1;
+  position: relative;
+  top: 15px;
+  border-radius: 0 0 10px 10px;
+}
+
+.input-text {
+  margin: 15px 0px 0px 10px;
+  width: 70%;
+  padding: 8px 5px;
+  border-radius: 10px;
+  border: none;
+  font-family: Helvetica;
+}
+
+.input-text[type=text]:focus {
+  outline: none;
+  border: 2px solid #8b0017;
+}
+
+.input-button {
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: white;
+  color: #E85A4F;
+  position: relative;
+  top: 4px;
+  margin-left: 23px; 
+  font-size: 25px;
+}
+
+.input-button:hover {
+  color: #E85A4F;
+  background-color: #dcdcdc;
 }

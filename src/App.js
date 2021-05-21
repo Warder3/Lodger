@@ -1,11 +1,16 @@
-import  Navbar from './navbar'
+import Navbar from './navbar'
+import Hero from './Hero'
 
 function App() {
   return (
     <div className="App">
-      <div className="navbar-container">
+      <div className="nav_bar">
         <Navbar />
-      </div>      
+      </div>   
+      <section className="hero-container">
+        
+        <Hero />
+      </section>   
     </div>
   );
 }

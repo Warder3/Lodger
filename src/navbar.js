@@ -1,9 +1,8 @@
-import React from 'react'
 import Links from './links'
 
 const Navbar = () => {
     return (
-        <div className="nav_bar">
+        <div className="navbar-container">
             <p id="brandname"><a href="#">Lodger</a></p>
             <div className="links-container">
                 <Links />
