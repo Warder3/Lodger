@@ -8,7 +8,6 @@ function App() {
         <Navbar />
       </div>   
       <section className="hero-container">
-        
         <Hero />
       </section>   
     </div>
