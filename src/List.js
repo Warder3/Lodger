@@ -1,14 +1,20 @@
 import React, {useState} from 'react'
+import {BsTrash} from 'react-icons/bs'
 
-const List = ({names, setNames}) => {
+const List = ({names}) => {
 
-    const [key, setKey] = useState(0);
 
     return (
-        names.map(name => {
-            <p> {name} {key}</p>
-            setKey(key+1);
-        })
+        <div className="listContainer">
+        {
+        names.map(name => (
+            <div key={name.toString()} className="nameContent">
+                {name}
+                <BsTrash className="trashIcon"/>
+            </div>
+        ))}
+
+        </div>
     )
 }
 

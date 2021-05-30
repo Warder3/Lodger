@@ -10,9 +10,7 @@ const Hero = () => {
 
         <div>
             <Names names={names} setNames={setNames}/>
-            <div>
-                <List names={names} setNames={setNames}/>
-            </div>
+            <List names={names} />
         </div>
     )
 }
