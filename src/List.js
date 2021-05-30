@@ -1,16 +1,22 @@
 import React, {useState} from 'react'
 import {BsTrash} from 'react-icons/bs'
 
-const List = ({names}) => {
+const List = ({names, setNames}) => {
 
+    const deleteName = (id) => {
+
+        const newList = names.filter((name) => name.key != id)
+
+        setNames(newList)
+    }
 
     return (
         <div className="listContainer">
         {
-        names.map(name => (
-            <div key={name.toString()} className="nameContent">
-                {name}
-                <BsTrash className="trashIcon"/>
+        names.map(item => (
+            <div key={item.name} className="listContent">
+                <div className="roomie"> {item.name} </div>
+                <BsTrash className="trashIcon" onClick={() => deleteName(item.key)}/>
             </div>
         ))}
 

@@ -52,7 +52,7 @@ body {
 
 .hero-container {
   width: 25%;
-  height: 300px;
+  height: 450px;
   margin: 40px 30px 0;
   border-radius: 10px;
   background-color: #E85A4F;
@@ -74,13 +74,17 @@ body {
   justify-content: space-between;
 }
 
+#roommateContainer {
+  background-color: #FA8072;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .names {
   width: 100%;
-  height: 260px;
-  background-color: #ffb6c1;
   position: relative;
   top: 15px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px 10px;
 }
 
 .input-text {
@@ -118,10 +122,26 @@ body {
 }
 
 .listContainer {
-  background-color: white;
+  margin: 0 2%;
+}
 
+.listContent {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  font-size: 18px;
+  margin: 9px 3%;
+  border-radius: 4px;
+}
+
+.roomie {
+  margin: 2px 3%;
 }
 
 .trashIcon {
   float: right;
+  margin: 4px 5px;
+}
+.trashIcon:hover {
+  color: grey;
 }
