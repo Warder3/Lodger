@@ -1,4 +1,4 @@
-import Navbar from './navbar'
+import Navbar from './Navbar'
 import Hero from './Hero'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
       <div className="nav_bar">
         <Navbar />
       </div>   
-      <section className="hero-container">
+      <section>
         <Hero />
       </section>   
     </div>

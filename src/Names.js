@@ -8,20 +8,24 @@ const Names = ({names, setNames}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setName('');
-        console.log(names)
     }
 
     const submit = () => {
         if (names.length > 9) {
             alert('Sorry, it seems you have too many roommates for me to handle.')
+            return
         }
+        if (name == '') {
+            alert('Please submit a valid name') 
+            return
+        } 
         if (names.some(item => item.name == name)) {
             alert(`It seems that you two ${name}'s . Differentiate them by using their last names.`)
+            return
         }
 
         else {
             setNames([...names, {name: name, key: name }])
-            
         }
     }
 
@@ -29,7 +33,7 @@ const Names = ({names, setNames}) => {
         
         <div id="roommateContainer">
             <p id="roommate"> Roommates:</p>
-            <form id="form" onSubmit={handleSubmit}>``
+            <form id="form" onSubmit={handleSubmit}>
                 <input 
                     type="text"
                     placeholder="Jon Doe" 

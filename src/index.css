@@ -51,9 +51,13 @@ body {
 }
 
 .hero-container {
-  width: 25%;
-  height: 450px;
-  margin: 40px 30px 0;
+  display: flex
+}
+
+.names-container {
+  width: 24%;
+  height: 62%;
+  margin: 20px 30px 0;
   border-radius: 10px;
   background-color: #E85A4F;
   position: absolute;
@@ -66,6 +70,7 @@ body {
   left: 10px;
   font-size: 18px;
   font-family: Helvetica;
+  font-weight: bold;
   color: white;
 }
 
@@ -88,15 +93,15 @@ body {
 }
 
 .input-text {
-  margin: 15px 0px;
+  margin: 15px 10px 15px 0px;
   width: 75%;
-  padding: 10px 5px;
+  padding: 10px 0;
   border-radius: 10px;
   border: none;
   font-size: 15px;
   font-family: Helvetica;
   position: relative;
-  right: 4%;
+  left: 5%;
 }
 
 .input-text[type=text]:focus {
@@ -144,4 +149,109 @@ body {
 }
 .trashIcon:hover {
   color: grey;
+}
+
+.chores-container {
+  width: 25%;
+  height: 85%;
+  margin: 20px 30px 0 30%;
+  border-radius: 10px;
+  background-color:#EAE7DC;
+  position: absolute;
+  display: flex;
+  min-width: 180px;
+}
+
+.chores-header {
+  width: 100%;
+  height: 100px;
+  background-color: #D8C3A5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#chore-title {
+  margin: 10px;
+  font-size: 18px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #E85A4F;
+}
+
+#chore-form {
+  display: flex;
+  justify-content: space-around;
+}
+
+.chore-input-text {
+  position: relative;
+  bottom: 6px;
+  left: 4%;
+  width: 50%;
+  min-width: 50px;
+  padding: 10px 0px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-family: Helvetica;
+  background-color: white;
+}
+
+.chore-input-text[type=text]:focus {
+  outline: none;
+  border: 2px solid #564F6F;
+}
+
+.difficulty-container {
+  display: flex;
+  margin: 0 4%;
+  height: 36.5px;
+  background-color: white;
+  position: relative;
+  bottom: 5px;
+  left: 2.5px;
+  border-radius: 4px;
+}
+
+#difficulty-level {
+  padding: 0px 16px;
+  position: relative;
+  bottom: 15%;
+}
+
+.difficulty-plus{
+  padding: 9px;
+  border: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #A7C7E7;
+  color: white;
+}
+.difficulty-minus {
+  padding: 10px;
+  border: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #A7C7E7;
+  color: white;
+}
+
+.difficulty-plus:hover, .difficulty-minus:hover {
+  background-color: #7393B3;
+}
+
+.chore-input-button {
+  border: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  background-color: white;
+  color: #4C495D;
+  position: relative;
+  bottom: 5px;
+  font-size: 25px;
+  right: 2%;
+}
+
+.chore-input-button:hover {
+  background-color: #dcdcdc;
 }

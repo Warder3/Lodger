@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {BsTrash} from 'react-icons/bs'
 
-const List = ({names, setNames}) => {
+const NameList = ({names, setNames}) => {
 
     const deleteName = (id) => {
 
@@ -24,4 +24,4 @@ const List = ({names, setNames}) => {
     )
 }
 
-export default List
+export default NameList
