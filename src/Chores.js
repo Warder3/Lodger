@@ -7,7 +7,6 @@ const Chores = ({chores, setChores}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setChore('');
         console.log(chores)
     }
 
@@ -16,8 +15,14 @@ const Chores = ({chores, setChores}) => {
             alert('Please, add a chore')
             return;
         }
+        if (chore.length > 30) {
+            alert('Please, shorten your description of the chore')
+            return;
+        }
         else {
             setChores([...chores, {chore: chore, difficulty: difficulty, key: chore}])
+            setChore('')
+            setDifficulty(1)
         }
     }
 

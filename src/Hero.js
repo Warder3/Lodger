@@ -3,11 +3,19 @@ import Names from './Names'
 import NameList from './NameList'
 import Chores from './Chores'
 import ChoreList from './ChoreList'
+import PaginationBar from './PaginationBar'
 
 const Hero = () => {
 
     const [names, setNames] = useState([]);
     const [chores, setChores] = useState([]);
+
+    const [currPage, setCurrPage] = useState(1);
+    const [choresPerPage, setChoresPerPage] = useState(13);
+    const lastChoreIndex = currPage * choresPerPage;
+    const firstChoreIndex = lastChoreIndex - choresPerPage;
+    const currChores = chores.slice(firstChoreIndex, lastChoreIndex)
+
 
     return (
 
@@ -18,8 +26,9 @@ const Hero = () => {
             </div>
             <div className="chores-container">
                 <Chores chores={chores} setChores={setChores}/>
-                <ChoreList chores={chores} setChores={setChores}/>
-            </div>
+                <ChoreList chores={currChores} setCurrPage={setCurrPage} setChores={setChores}/>
+                <PaginationBar chores={chores} currPage={currPage} setCurrPage={setCurrPage} choresPerPage={choresPerPage}/>
+            </div>            
         </div>
     )
 }
