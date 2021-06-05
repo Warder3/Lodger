@@ -4,6 +4,7 @@ import NameList from './NameList'
 import Chores from './Chores'
 import ChoreList from './ChoreList'
 import PaginationBar from './PaginationBar'
+import Objects from './Objects'
 
 const Hero = () => {
 
@@ -28,7 +29,10 @@ const Hero = () => {
                 <Chores chores={chores} setChores={setChores}/>
                 <ChoreList chores={currChores} setCurrPage={setCurrPage} setChores={setChores}/>
                 <PaginationBar chores={chores} currPage={currPage} setCurrPage={setCurrPage} choresPerPage={choresPerPage}/>
-            </div>            
+            </div>  
+            <div className="objects-container">
+                <Objects names={names}/>
+            </div>          
         </div>
     )
 }
