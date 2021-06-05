@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Lodger/static/css/main.152c52d2.chunk.css",
+    "main.js": "/Lodger/static/js/main.bd6f4d55.chunk.js",
+    "main.js.map": "/Lodger/static/js/main.bd6f4d55.chunk.js.map",
+    "runtime-main.js": "/Lodger/static/js/runtime-main.305b3f85.js",
+    "runtime-main.js.map": "/Lodger/static/js/runtime-main.305b3f85.js.map",
+    "static/js/2.d5e95cc8.chunk.js": "/Lodger/static/js/2.d5e95cc8.chunk.js",
+    "static/js/2.d5e95cc8.chunk.js.map": "/Lodger/static/js/2.d5e95cc8.chunk.js.map",
+    "index.html": "/Lodger/index.html",
+    "static/css/main.152c52d2.chunk.css.map": "/Lodger/static/css/main.152c52d2.chunk.css.map",
+    "static/js/2.d5e95cc8.chunk.js.LICENSE.txt": "/Lodger/static/js/2.d5e95cc8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.305b3f85.js",
+    "static/js/2.d5e95cc8.chunk.js",
+    "static/css/main.152c52d2.chunk.css",
+    "static/js/main.bd6f4d55.chunk.js"
+  ]
+}
