@@ -6,7 +6,6 @@ const NameList = ({names, setNames}) => {
     const deleteName = (id) => {
 
         const newList = names.filter((name) => name.key != id)
-
         setNames(newList)
     }
 

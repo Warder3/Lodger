@@ -17,6 +17,7 @@ const Hero = () => {
     const firstChoreIndex = lastChoreIndex - choresPerPage;
     const currChores = chores.slice(firstChoreIndex, lastChoreIndex)
 
+    const [totalDifficulty, setTotalDifficulty] = useState(0);
 
     return (
 
@@ -26,12 +27,12 @@ const Hero = () => {
                 <NameList names={names} setNames={setNames}/>
             </div>
             <div className="chores-container">
-                <Chores chores={chores} setChores={setChores}/>
-                <ChoreList chores={currChores} setCurrPage={setCurrPage} setChores={setChores}/>
+                <Chores chores={chores} setChores={setChores} totalDifficulty={totalDifficulty} setTotalDifficulty={setTotalDifficulty}/>
+                <ChoreList chores={currChores} setCurrPage={setCurrPage} setChores={setChores} totalDifficulty={totalDifficulty} setTotalDifficulty={setTotalDifficulty}/>
                 <PaginationBar chores={chores} currPage={currPage} setCurrPage={setCurrPage} choresPerPage={choresPerPage}/>
             </div>  
             <div className="objects-container">
-                <Objects names={names}/>
+                <Objects names={names} chores={chores} totalDifficulty={totalDifficulty}/>
             </div>          
         </div>
     )

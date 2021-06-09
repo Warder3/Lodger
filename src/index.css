@@ -295,9 +295,9 @@ body {
 
 .pagination-bar-container {
   display: flex;
-  position: fixed;
-  bottom: 3px;
-  left: 37.5%;
+  position: absolute;
+  top: 590px;
+  left: 28.5%;
 }
 
 #page-minus, #page-plus {
@@ -328,20 +328,45 @@ body {
 }
 
 .objects-container {
-  width: 100%;
+  width: 40%;
   height: 100%;
-  position: relative;
-  left: 55%;
+  position: absolute;
+  left: 57.5%;
+  top: 75px;
 }
 
 .object-content-container {
-  display: flex;
   float: left;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
 }
 
 .object-content {
-  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around;
+  background-color: #152238;
+  width: 153px;
+  min-height: 10px;
+  padding: 12.5% 0 7% 0;
+  margin: 10px 2%; 
+  color: #68BB59;
+  border-radius: 10px;
+}
+
+.object-name, .object-difficulty {
+  font-size: 15;
+  margin: 0 10px;
+  text-align: center;
+  
+}
+
+.object-difficulty {
+  margin-right: 10px;
+  background-color: #707070;
+  color: white;
+  padding: 20px;
+  position: relative;
+  bottom: 20px;
 }
 

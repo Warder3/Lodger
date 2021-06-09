@@ -1,13 +1,12 @@
 import React, {useState} from 'react'
 
-const Chores = ({chores, setChores}) => {
+const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty}) => {
 
     const [chore, setChore] = useState('');
     const [difficulty, setDifficulty] = useState(1);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(chores)
     }
 
     const submit = () => {
@@ -21,6 +20,7 @@ const Chores = ({chores, setChores}) => {
         }
         else {
             setChores([...chores, {chore: chore, difficulty: difficulty, key: chore}])
+            setTotalDifficulty(totalDifficulty+difficulty)        
             setChore('')
             setDifficulty(1)
         }

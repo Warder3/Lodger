@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import {BsTrash} from 'react-icons/bs'
 
-const ChoreList = ({chores, setCurrPage, setChores}) => {
+const ChoreList = ({chores, setCurrPage, setChores, totalDifficulty, setTotalDifficulty}) => {
 
-    const deleteChore = (id) => {
-
-        const newList = chores.filter((chore) => chore.key != id)
+    const deleteChore = (c) => {
+        const newList = chores.filter((chore) => chore.key != c.key)
         setChores(newList)
+
+        setTotalDifficulty(totalDifficulty - c.difficulty)
     }
 
     
@@ -22,7 +23,7 @@ const ChoreList = ({chores, setCurrPage, setChores}) => {
                         <BsTrash 
                             className="trashIcon" 
                             id="trashIcon-chores" 
-                            onClick = {() => deleteChore(chore.key)}
+                            onClick = {() => deleteChore(chore)}
                         />
                     </section>
                 </div>
