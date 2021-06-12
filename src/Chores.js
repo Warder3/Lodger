@@ -1,9 +1,21 @@
 import React, {useState} from 'react'
 
-const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty}) => {
+const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty, names, perChores, setPerChores}) => {
 
     const [chore, setChore] = useState('');
     const [difficulty, setDifficulty] = useState(1);
+
+
+    // seperateChores function randomly assigns an name with a chore
+
+    const seperateChores = (names, chores) => {
+        let index = Math.floor(Math.random() * names.length)
+
+        let placeHolder = [...names[index].perChores, chore]
+
+        names[index].perChores = placeHolder
+        names[index].perDifficulty = names[index].perDifficulty + difficulty
+} 
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -20,7 +32,8 @@ const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty}) => {
         }
         else {
             setChores([...chores, {chore: chore, difficulty: difficulty, key: chore}])
-            setTotalDifficulty(totalDifficulty+difficulty)        
+            setTotalDifficulty(totalDifficulty+difficulty)   
+            seperateChores(names, chores);     
             setChore('')
             setDifficulty(1)
         }

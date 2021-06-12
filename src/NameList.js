@@ -7,6 +7,7 @@ const NameList = ({names, setNames}) => {
 
         const newList = names.filter((name) => name.key != id)
         setNames(newList)
+
     }
 
     return (

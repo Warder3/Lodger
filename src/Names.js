@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 
 
-const Names = ({names, setNames}) => {
+const Names = ({names, setNames, perChores, perDifficulty}) => {
 
     const [name, setName] = useState('');
-    const [probability, setProbability] = useState(0);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,7 +25,7 @@ const Names = ({names, setNames}) => {
         }
 
         else {
-            setNames([...names, {name: name, key: name}])
+            setNames([...names, {name: name, key: name, perDifficulty: perDifficulty, perChores: perChores}])
         }
     }
 

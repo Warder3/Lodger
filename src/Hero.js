@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Names from './Names'
 import NameList from './NameList'
 import Chores from './Chores'
@@ -19,20 +19,61 @@ const Hero = () => {
 
     const [totalDifficulty, setTotalDifficulty] = useState(0);
 
+    const [perChores, setPerChores] = useState([]);
+    const [perDifficulty, setPerDifficulty] = useState(0);
+
+
     return (
 
         <div className="hero-container">
             <div className="names-container">
-                <Names names={names} setNames={setNames}/>
-                <NameList names={names} setNames={setNames}/>
+                <Names 
+                    names={names} 
+                    setNames={setNames} 
+                    perChores={perChores}
+                    perDifficulty={perDifficulty}
+                    />
+
+                <NameList 
+                    names={names} 
+                    setNames={setNames} />                    
+
             </div>
             <div className="chores-container">
-                <Chores chores={chores} setChores={setChores} totalDifficulty={totalDifficulty} setTotalDifficulty={setTotalDifficulty}/>
-                <ChoreList chores={currChores} setCurrPage={setCurrPage} setChores={setChores} totalDifficulty={totalDifficulty} setTotalDifficulty={setTotalDifficulty}/>
-                <PaginationBar chores={chores} currPage={currPage} setCurrPage={setCurrPage} choresPerPage={choresPerPage}/>
+                <Chores 
+                    chores={chores} 
+                    setChores={setChores} 
+                    totalDifficulty={totalDifficulty} 
+                    setTotalDifficulty={setTotalDifficulty} 
+                    names={names}
+                    perChores={perChores}
+                    perDifficulty={perDifficulty}
+                    setPerChores={setPerChores}
+                />
+
+                <ChoreList         
+                    chores={currChores} 
+                    setCurrPage={setCurrPage} 
+                    setChores={setChores} 
+                    totalDifficulty={totalDifficulty} 
+                    setTotalDifficulty={setTotalDifficulty}
+                    names={names}
+                    perDifficulty={perDifficulty}/>
+
+
+                <PaginationBar 
+                    chores={chores} 
+                    currPage={currPage} 
+                    setCurrPage={setCurrPage} 
+                    choresPerPage={choresPerPage}/>
+
             </div>  
             <div className="objects-container">
-                <Objects names={names} chores={chores} totalDifficulty={totalDifficulty}/>
+                <Objects  
+                    names={names} 
+                    chores={chores}
+                    totalDifficulty={totalDifficulty}
+                    />
             </div>          
         </div>
     )
