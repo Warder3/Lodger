@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty, names, perChores, setPerChores}) => {
+const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty, names, setNames, setCurrChore}) => {
 
     const [chore, setChore] = useState('');
     const [difficulty, setDifficulty] = useState(1);
@@ -11,10 +11,14 @@ const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty, names, 
     const seperateChores = (names, chores) => {
         let index = Math.floor(Math.random() * names.length)
 
-        let placeHolder = [...names[index].perChores, chore]
+        let nameScapeGoat = [...names]
 
-        names[index].perChores = placeHolder
-        names[index].perDifficulty = names[index].perDifficulty + difficulty
+        let placeHolder = [chore, ...nameScapeGoat[index].perChores]
+        nameScapeGoat[index].perChores = placeHolder
+        nameScapeGoat[index].perDifficulty += difficulty
+        nameScapeGoat[index].currChore = 0
+
+        setNames(nameScapeGoat) 
 } 
 
     const handleSubmit = (e) => {
@@ -31,11 +35,11 @@ const Chores = ({chores, setChores, totalDifficulty, setTotalDifficulty, names, 
             return;
         }
         else {
-            setChores([...chores, {chore: chore, difficulty: difficulty, key: chore}])
+            setChores([{chore: chore, difficulty: difficulty, key: chore}, ...chores])
             setTotalDifficulty(totalDifficulty+difficulty)   
             seperateChores(names, chores);     
             setChore('')
-            setDifficulty(1)
+            setDifficulty(1)            
         }
     }
 

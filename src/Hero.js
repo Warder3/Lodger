@@ -8,6 +8,7 @@ import Objects from './Objects'
 
 const Hero = () => {
 
+    const [name, setName] = useState('');
     const [names, setNames] = useState([]);
     const [chores, setChores] = useState([]);
 
@@ -21,7 +22,10 @@ const Hero = () => {
 
     const [perChores, setPerChores] = useState([]);
     const [perDifficulty, setPerDifficulty] = useState(0);
-
+    
+    const [currChore, setCurrChore] = useState(0);  
+    const [scapeGoat, setScapeGoat] = useState('')
+    const [temp, setTemp] = useState(name.currChore)
 
     return (
 
@@ -31,7 +35,10 @@ const Hero = () => {
                     names={names} 
                     setNames={setNames} 
                     perChores={perChores}
-                    perDifficulty={perDifficulty}
+                    perDifficulty={perDifficulty}                      
+                    name={name}
+                    setName={setName}     
+                    currChore={currChore}    
                     />
 
                 <NameList 
@@ -46,9 +53,11 @@ const Hero = () => {
                     totalDifficulty={totalDifficulty} 
                     setTotalDifficulty={setTotalDifficulty} 
                     names={names}
-                    perChores={perChores}
-                    perDifficulty={perDifficulty}
-                    setPerChores={setPerChores}
+                    setNames={setNames}    
+                    scapeGoat={scapeGoat}
+                    setScapeGoat={setScapeGoat}  
+                    currChore={currChore}
+                    setCurrChore={setCurrChore}                                           
                 />
 
                 <ChoreList         
@@ -72,7 +81,11 @@ const Hero = () => {
                 <Objects  
                     names={names} 
                     chores={chores}
-                    totalDifficulty={totalDifficulty}
+                    totalDifficulty={totalDifficulty}     
+                    scapeGoat={scapeGoat}
+                    setScapeGoat={setScapeGoat}  
+                    currChore={currChore} 
+                    setCurrChore={setCurrChore}                     
                     />
             </div>          
         </div>

@@ -19,6 +19,7 @@ const ChoreList = ({chores, setCurrPage, setChores, totalDifficulty, setTotalDif
         let newPerChores = current[0].perChores.filter((chore) => chore != c.chore)
 
         current[0].perChores = newPerChores
+
     }
 
     

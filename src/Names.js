@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 
 
-const Names = ({names, setNames, perChores, perDifficulty}) => {
-
-    const [name, setName] = useState('');
+const Names = ({names, setNames, perChores, perDifficulty, name, setName, currChore}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setName('');
+        setName('');        
     }
 
     const submit = () => {
@@ -25,7 +23,7 @@ const Names = ({names, setNames, perChores, perDifficulty}) => {
         }
 
         else {
-            setNames([...names, {name: name, key: name, perDifficulty: perDifficulty, perChores: perChores}])
+            setNames([...names, {name: name, key: name, perDifficulty: perDifficulty, perChores: perChores, currChore: currChore}])
         }
     }
 
