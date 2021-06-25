@@ -46,7 +46,7 @@ body {
 }
 
 #contact {
-  background-color: #C41E3A;
+  background-color: #23395d;
   padding: 2px 15px;
   border-radius: 10px;
 }
@@ -308,7 +308,7 @@ body {
   border-radius: 4px;
   font-size: 17px;
   box-shadow: 1px 1px 1px grey;
-  background-color: #6fbbd3;
+  background-color: #cc8800;
   color: #6E260E;
 }
 
@@ -321,8 +321,8 @@ body {
   font-size: 15px;
   position: relative;
   bottom: 15px;
-  color: white;
-  background-color: #E85A4F;
+  color: black;
+  background-color: #d9b382;
   padding: 10px 15px;
   border-radius: 100%;
 }
@@ -351,6 +351,8 @@ body {
   margin: 2%;
   min-width: 80px;
   border-radius: 7px;
+  position: relative;
+  top: 6px;
 }
 
 .object-title {

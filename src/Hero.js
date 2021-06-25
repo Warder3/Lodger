@@ -24,8 +24,7 @@ const Hero = () => {
     const [perDifficulty, setPerDifficulty] = useState(0);
     
     const [currChore, setCurrChore] = useState(0);  
-    const [scapeGoat, setScapeGoat] = useState('')
-    const [temp, setTemp] = useState(name.currChore)
+    const [scapeGoat, setScapeGoat] = useState('')    
 
     return (
 
@@ -43,7 +42,9 @@ const Hero = () => {
 
                 <NameList 
                     names={names} 
-                    setNames={setNames} />                    
+                    setNames={setNames} 
+                    chores={chores}
+                    setChores={setChores}/>                    
 
             </div>
             <div className="chores-container">

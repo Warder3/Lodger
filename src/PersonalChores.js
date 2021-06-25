@@ -10,8 +10,7 @@ const PersonalChores = ({name, currChore, setCurrChore}) => {
             return 
         }
         else {
-            setTemp(temp - 1)               
-
+            setTemp(temp - 1)                           
         }
     }
 
@@ -20,7 +19,16 @@ const PersonalChores = ({name, currChore, setCurrChore}) => {
             return;
         }
         else {                           
-            setTemp(temp+1)                      
+            setTemp(temp+1)                              
+        }
+    }
+
+    const check = () => {
+        if (name.perChores.length > 0) {
+            return temp + 1
+        }
+        else {
+            return temp
         }
     }
 
@@ -38,7 +46,7 @@ const PersonalChores = ({name, currChore, setCurrChore}) => {
                 </button>
             </div>
             <div className="count">
-                {temp} / {name.perChores.length}
+                {check()} / {name.perChores.length}
             </div>
         </div>
     )

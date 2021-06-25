@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 import {BsTrash} from 'react-icons/bs'
 
-const NameList = ({names, setNames}) => {
+const NameList = ({names, setNames, chores, setChores}) => {
 
-    const deleteName = (id) => {
+    // This function deletes names and deletes the person's chores from the entire chore list
+    const deleteName = (id) => {        
+        const newList = names.filter((name) => name.key != id.key)
+        setNames(newList)    
 
-        const newList = names.filter((name) => name.key != id)
-        setNames(newList)
-
+        const newChores = chores.filter((chore) => !(id.perChores.includes(chore.key)))        
+        setChores(newChores)
     }
 
     return (
@@ -16,7 +18,7 @@ const NameList = ({names, setNames}) => {
         names.map(item => (
             <div key={item.name} className="listContent">
                 <div className="roomie"> {item.name} </div>
-                <BsTrash className="trashIcon" onClick={() => deleteName(item.key)}/>
+                <BsTrash className="trashIcon" onClick={() => deleteName(item)}/>
             </div>
         ))}
 
